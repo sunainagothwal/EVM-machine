@@ -372,42 +372,7 @@ th.side-col:nth-child(5) {
         font-size: 13px;
     }
 }
-@media screen and (max-width: 600px) {
 
-    table-container,
-    table,
-    thead,
-    tbody,
-    th,
-    td,
-    tr {
-        display: block;
-    }
-
-    thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-
-    tr {
-        margin-bottom: 20px;
-        border: 1px solid #ddd;
-    }
-
-    td {
-        border: none;
-        position: relative;
-        padding-left: 50%;
-    }
-
-    td:before {
-        position: absolute;
-        left: 6px;
-        content: attr(data-label);
-        font-weight: bold;
-    }
-}
 @media (max-width: 576px) {
     .voting_btn {
         padding: 2px 25px;
@@ -415,3 +380,34 @@ th.side-col:nth-child(5) {
         min-width: 100px;
     }
 }
+@media(max-width: 576px) {
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    thead {
+        display: none;
+        /* hide headers if you want a simplified view */
+    }
+
+    tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        flex-basis: 50%;
+    } }
