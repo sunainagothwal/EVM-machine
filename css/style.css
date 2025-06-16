@@ -372,14 +372,42 @@ th.side-col:nth-child(5) {
         font-size: 13px;
     }
 }
-@media (max-width: 768px) {
-    .table-container {
-        width: 70%;
-        overflow-x: auto;
-        padding: 10px;
+@media screen and (max-width: 600px) {
+
+    table-container,
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        left: 6px;
+        content: attr(data-label);
+        font-weight: bold;
     }
 }
-
 @media (max-width: 576px) {
     .voting_btn {
         padding: 2px 25px;
