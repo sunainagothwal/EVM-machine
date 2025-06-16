@@ -372,67 +372,54 @@ th.side-col:nth-child(5) {
         font-size: 13px;
     }
 }
-
-@media (max-width: 576px) {
-    .voting_btn {
-        padding: 2px 25px;
-        font-size: 12px;
-        min-width: 100px;
-    }
-}
-
 @media(max-width: 576px) {
     table {
-        display: block;
-        /* Make the table container scrollable if needed */
-        width: 100%;
+        width: 70%;
+        font-size: 9px;
+        font-weight: bold;
         overflow-x: auto;
-        /* Enable horizontal scrolling */
-        -webkit-overflow-scrolling: touch;
-        /* Smooth scrolling on iOS */
+        display: block;
     }
 
     thead {
         display: table-header-group;
-        /* Keep header visible */
     }
 
     tbody {
         display: table-row-group;
-        /* Keep rows in normal table format */
     }
 
     tbody tr {
         display: table-row;
-        /* Keep each row as a table row */
-        margin-bottom: 0;
-        /* Reset margin if any */
-        border: 1px solid #ddd;
-        /* Optional: Keep row borders */
-        border-radius: 0;
-        /* Remove border radius for better scrolling experience */
-        padding: 0;
-        /* Reset padding */
     }
 
     tbody td {
         display: table-cell;
-        /* Keep cells as table cells */
-        padding: 12px;
-        /* Maintain cell padding */
+        padding: 9px;
         border: 1px solid #ddd;
-        /* Keep cell borders */
+        word-wrap: break-word;
     }
 
-    /* Optional: Keep the header labels visible for accessibility */
-    thead th {
-        display: table-cell;
-        background-color: #f1f1f1;
-        font-weight: bold;
+    td.S.no{
+        width: 10px;
+    }
+    td.symbol {
+        width: 40px;
     }
 
-    /* Remove pseudo-elements for labels, so the table looks consistent */
-    tbody td::before {
-        display: none;
+    td.name {
+        width: 90px;/
+    }
+
+    td.button {
+        width: 100px;
+        text-align: center;
+    }
+
+    .voting_btn {
+        padding: 4px;
+            font-size: 10px;
+            width: auto;
+            min-width: 50px;
     }
 }
