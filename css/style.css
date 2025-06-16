@@ -380,34 +380,59 @@ th.side-col:nth-child(5) {
         min-width: 100px;
     }
 }
+
 @media(max-width: 576px) {
     table {
         display: block;
+        /* Make the table container scrollable if needed */
         width: 100%;
         overflow-x: auto;
+        /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch;
+        /* Smooth scrolling on iOS */
     }
 
     thead {
-        display: none;
-        /* hide headers if you want a simplified view */
+        display: table-header-group;
+        /* Keep header visible */
+    }
+
+    tbody {
+        display: table-row-group;
+        /* Keep rows in normal table format */
     }
 
     tbody tr {
-        display: block;
-        margin-bottom: 15px;
+        display: table-row;
+        /* Keep each row as a table row */
+        margin-bottom: 0;
+        /* Reset margin if any */
         border: 1px solid #ddd;
-        padding: 10px;
-        border-radius: 8px;
+        /* Optional: Keep row borders */
+        border-radius: 0;
+        /* Remove border radius for better scrolling experience */
+        padding: 0;
+        /* Reset padding */
     }
 
     tbody td {
-        display: flex;
-        justify-content: space-between;
-        padding: 8px 0;
+        display: table-cell;
+        /* Keep cells as table cells */
+        padding: 12px;
+        /* Maintain cell padding */
+        border: 1px solid #ddd;
+        /* Keep cell borders */
     }
 
-    tbody td::before {
-        content: attr(data-label);
+    /* Optional: Keep the header labels visible for accessibility */
+    thead th {
+        display: table-cell;
+        background-color: #f1f1f1;
         font-weight: bold;
-        flex-basis: 50%;
-    } }
+    }
+
+    /* Remove pseudo-elements for labels, so the table looks consistent */
+    tbody td::before {
+        display: none;
+    }
+}
