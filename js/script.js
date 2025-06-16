@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   }
                 </td>
                 <td class="side-col" style="background-color: #f2f2f2 ;">
-                  <img src="./assets/dimButton.jpeg" alt="Bulb" id="bulb-${
+                  <img src="./assets/blueButton.jpeg" alt="Bulb" id="bulb-${
                     candidate.id
                   }" width="20">
                 </td>
@@ -179,7 +179,7 @@ function showVVPATPopup(candidate) {
 
     const bulbElement = document.getElementById("bulb-" + candidate.id);
     if (bulbElement) {
-      bulbElement.src = "./assets/dimButton.jpeg";
+      bulbElement.src = "./assets/blueButton.jpeg";
     }
 
     const greenBulb = document.getElementById("green_blb");
