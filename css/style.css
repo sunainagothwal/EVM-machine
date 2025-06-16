@@ -372,3 +372,17 @@ th.side-col:nth-child(5) {
         font-size: 13px;
     }
 }
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .voting_btn {
+        padding: 2px 25px;
+        font-size: 12px;
+        min-width: 100px;
+    }
+}
