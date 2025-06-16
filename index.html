@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Dummy Election Voting</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/script.js"></script>
+
+</head>
+<body>
+    <div class="container ">
+        <div class="stimulated-polls-header">
+            Digital Dummy Ballot Unit <br> for Stimulated Polls (EVMs) <br>
+            <small class="note">(Note: For Demonstration & Education Purpose only)</small>
+        </div>
+        <h2 class="main-title">नवी मुंबई महानगर पालिका निवडणूक २०२५<br>
+            ई - डिजिटल बॅलेट डेमो मतदान यंत्र</h2>
+
+            <div class="action-buttons">
+                <button class="btn btn-demo pulse" onclick="playDemoSound()">
+                    <i class="fas fa-info-circle me-2"></i>डेमोच्या अधिक माहितीसाठी इथे क्लिक करा
+                </button>
+                <a href="https://wa.me/?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%95%E0%A4%BE%E0%A4%B0,%0A%E0%A4%A1%E0%A5%87%E0%A4%AE%E0%A5%8B%20%E0%A4%AE%E0%A4%A4%E0%A4%A6%E0%A4%BE%E0%A4%A8%20%E0%A4%95%E0%A4%B0%E0%A4%A3%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%BE%E0%A4%A0%E0%A5%80%20%E0%A4%B2%E0%A4%BF%E0%A4%82%E0%A4%95%20%E0%A4%B5%E0%A4%B0%20%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%BF%E0%A4%95%20%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A5%87.%0A%0Ahttps://www.vsampark.com/%E0%A4%B8%E0%A4%82%E0%A4%A4%E0%A5%81%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8B%E0%A4%A4%E0%A4%B0%E0%A4%BE%E0%A4%B5%E0%A4%B9%E0%A4%82%E0%A4%AC%E0%A4%B0%E0%A5%8D%E0%A4%A1%E0%A5%87.html%0A%0A%E0%A4%A1%E0%A5%89.%E0%A4%B8%E0%A4%82%E0%A4%A4%E0%A5%81%E0%A4%95%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%AE%E0%A4%BE%E0%A4%B0%E0%A5%8B%E0%A4%A4%E0%A4%B0%E0%A4%BE%E0%A4%B5%20%E0%A4%B9%E0%A4%82%E0%A4%AC%E0%A4%B0%E0%A5%8D%E0%A4%A1%E0%A5%87%0A%E0%A4%AD%E0%A4%BE%E0%A4%B0%E0%A4%A4%E0%A5%80%E0%A4%AF%20%E0%A4%9C%E0%A4%A8%E0%A4%A4%E0%A4%BE%20%E0%A4%AA%E0%A4%95%E0%A5%8D%E0%A4%B7%0A16%20%E0%A4%A8%E0%A4%BE%E0%A4%82%E0%A4%A6%E0%A5%87%E0%A4%A1%20%E0%A4%B2%E0%A5%8B%E0%A4%95%E0%A4%B8%E0%A4%AD%E0%A4%BE%20%E0%A4%A8%E0%A4%BF%E0%A4%B5%E0%A4%A1%E0%A4%A3%E0%A5%82%E0%A4%95%202024"
+                    class="btn btn-whatsapp pulse" target="_blank">
+                    <i class="fab fa-whatsapp me-2"></i>Share on <br class="brhide" /> WhatsApp
+                </a>
+                </div>
+                <div class="header">
+                    मतदानाच्या दिवशी सुद्धा बॅट या चिन्हा समोरील निळे बटण दाबावे  
+                </div>
+                <div id="table-container">
+                
+                    <table class="table table-bordered border-dark ">
+                        <thead>
+                            <tr>
+                                <th colspan="5" class="p-2">
+                                    <div class="d-flex justify-content-between align-items-center ">
+                                        <div class="d-flex ">
+                                            <span class="me-2">Ready</span>
+                                            <span id="green_blb"></span>    
+                                        </div>
+                
+                                        <div class="fw-bold">
+                                            Dummy Ballot Unit
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                
+                            <tr class="table-dark">
+                                <th class="main-col">S.No</th>
+                                <th class="main-col">Name of Candidate</th>
+                                <th class="main-col">Election Symbol</th>
+                                <th class="side-col">Bulb</th>
+                                <th class="side-col">Button</th>
+                            </tr>
+                        </thead>
+                
+                        <tbody id="tableBody">
+                            <!-- your data rows go here -->
+                        </tbody>
+                    </table>  
+                </div>
+                <div id="vvpat-popup" class="vvpat-overlay">
+                    <div class="vvpat-modal">
+                        <img src="./assets/vvpat-machine.png" alt="VVPAT Machine" class="vvpat-img">
+                
+                        <div class="ballot-slip" id="ballot-slip">
+                
+                            <div class="slip-heading">Ballot Slip :
+                                <span id="vote-count" style="font-weight: bold; margin-left: 10px;">0</span>
+                            </div>
+                            <div class="slip-content">
+                                <img id="slip-photo" src="" alt="Candidate Photo">
+                                <div id="slip-name" class="slip-name"></div>
+                
+                                <img id="slip-symbol" class="slip-symbol" src="" alt="Symbol">
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+    
+                <footer class="footer">
+                    <span class="footer-center">
+                        Mr. Parmeshwar Ghorpade, Maharashtra<br>
+                        +91 84213 14884
+                    </span>
+                    <div class="footer-bottom">
+                        © 2025 Turtle Tech Management Services ®
+                    </div>
+                </footer>
+                
+                </div>
+                <div id="view-count" style="font-size: 15px; margin-top: 10px; text-align: center;">
+                    Views: <span id="count">0</span>  </div>
+    </div>
+    
+    </body>
+</html>
+
